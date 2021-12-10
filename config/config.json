@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "Classsed",
-    "password": "root",
-    "database": "sequelize_db",
+    "username": "postgres",
+    "password": "qwerty",
+    "database": "crud_db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

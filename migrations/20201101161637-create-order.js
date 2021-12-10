@@ -1,7 +1,7 @@
-'use strict'
+"use strict";
 module.exports = {
   up: async (queryInterface, DataTypes) => {
-    await queryInterface.createTable('posts', {
+    await queryInterface.createTable("orders", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -12,12 +12,19 @@ module.exports = {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
       },
-      body: {
+      orderIds: {
+        type: DataTypes.STRING,
+      },
+      product: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      userId: {
-        type: DataTypes.INTEGER,
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      status: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
       createdAt: {
@@ -28,9 +35,9 @@ module.exports = {
         allowNull: false,
         type: DataTypes.DATE,
       },
-    })
+    });
   },
   down: async (queryInterface, DataTypes) => {
-    await queryInterface.dropTable('posts')
+    await queryInterface.dropTable("orders");
   },
-}
+};
