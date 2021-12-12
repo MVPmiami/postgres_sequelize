@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
@@ -13,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"serv": "nodemon app.js"
+    "serv": "nodemon app.js"
   },
   "repository": {
     "type": "git",
