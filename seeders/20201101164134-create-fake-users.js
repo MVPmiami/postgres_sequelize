@@ -20,8 +20,8 @@ module.exports = {
           photo: "cola.png",
           cost: 5,
           producer: "coca-cola enc",
-          createdAt: "2020-11-01T16:30:07.592Z",
-          updatedAt: "2020-11-01T16:30:07.592Z",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           uuid: "35cf1b89-56d3-433c-9f43-4198eb8135de",
@@ -29,8 +29,8 @@ module.exports = {
           photo: "burger.png",
           cost: 10,
           producer: "burger enc",
-          createdAt: "2020-11-01T16:30:07.592Z",
-          updatedAt: "2020-11-01T16:30:07.592Z",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}

@@ -58,10 +58,10 @@ router
     }
   })
   .put(async (req, res) => {
-    const uuid = req.params.uuid;
+    const orderIds = req.params.uuid;
     const { status, mail } = req.body;
     try {
-      const order = await Order.findOne({ where: { uuid } });
+      const order = await Order.findOne({ where: { orderIds } });
       order.status = status;
       await order.save();
       send(status, mail);
