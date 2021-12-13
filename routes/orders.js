@@ -1,6 +1,7 @@
 const express = require("express");
 const { Order, Product } = require("./../models");
 let router = express.Router();
+const { send } = require("./../nodemailer");
 
 router
   .route("/")
@@ -58,11 +59,12 @@ router
   })
   .put(async (req, res) => {
     const uuid = req.params.uuid;
-    const { status } = req.body;
+    const { status, mail } = req.body;
     try {
       const order = await Order.findOne({ where: { uuid } });
       order.status = status;
       await order.save();
+      send(status, mail);
       return res.json(order);
     } catch (err) {
       console.log(err);
